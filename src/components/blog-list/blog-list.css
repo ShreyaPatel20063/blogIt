@@ -1,0 +1,18 @@
+.blog-list{
+    padding: 12px;
+    width: 70%;
+    margin: auto;
+    display: grid;
+    gap: 12px;
+}
+.blog:link, .blog:visited{
+    text-decoration: none;
+    display: inline-block;
+    background-color:#aad5e4;
+    color: black;
+    border-radius: 7px;
+    
+}
+.blog-content{
+    padding: 10px;
+}

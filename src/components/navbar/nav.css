@@ -1,0 +1,14 @@
+.navbar{
+    background-color: rgb(33, 112, 112);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar>a:link,.navbar>a:visited{
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+ } 
