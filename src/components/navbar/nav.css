@@ -5,10 +5,22 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    position: relative;
+}
+
+#back>svg{
+    font-size:x-large;
+}
+#back{
+    display: block;
+    position: absolute;
+    left: 2%
 }
 
 .navbar>a:link,.navbar>a:visited{
     text-decoration: none;
     display: inline-block;
+    align-items: center;
+    justify-content: center;
     color: black;
- } 
+ }  

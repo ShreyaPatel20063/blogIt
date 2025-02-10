@@ -1,0 +1,31 @@
+form{
+    margin: auto;
+    width: 50%;
+    display: grid;
+    text-align: left;    
+    margin-top: 10px;
+}
+form>input, form>textarea,form>input:focus, form>textarea:focus{
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+    margin:5px 0px;
+    background-color: #f4f6f7;
+}
+form>textarea{
+    height: 60vh;
+}
+form>span{
+    color: red;
+    font-size: x-small;
+}
+
+#submit{
+    outline: none;
+    background-color: #217070;
+    color: #d4dadd;
+    width: 100px;
+    font-weight: 500;
+  
+}

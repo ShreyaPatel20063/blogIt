@@ -1,6 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BlogPost from './blog-post/BlogPost';
 import HomePage from './HomePage';
 import PostPage from './post-page/PostPage';
@@ -11,8 +10,8 @@ const App = () => {
         <BrowserRouter>
             <Navbar />
             <Routes>
-                <Route index element={<HomePage />} />
-                <Route path="/blog:id" element={<BlogPost />} />
+                <Route index path="/" element={<HomePage />} />
+                <Route path="/blog/:id" element={<BlogPost />} />
                 <Route path="/new" element={<PostPage />} />
             </Routes>
         </BrowserRouter>

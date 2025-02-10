@@ -7,12 +7,46 @@
 }
 .blog:link, .blog:visited{
     text-decoration: none;
-    display: inline-block;
     background-color:#aad5e4;
     color: black;
     border-radius: 7px;
-    
+    display: block;
+    width: 100%;
+
 }
 .blog-content{
     padding: 10px;
+
+}
+.blog-content>p{
+    text-align: justify;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.subtitle{
+    font-style: italic;
+    font-size: smaller;
+}
+
+.new-blog-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.new-blog-btn>a:link,.new-blog-btn>a:visited{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    /* line-height: 30px; */
+    font-size: larger;
+    gap: 15px;
+}
+
+.paginate{
+    
 }
