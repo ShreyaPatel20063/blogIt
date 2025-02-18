@@ -1,10 +1,11 @@
 class DataService {
     constructor() {
-        this.data = [
-            {
-                id: 1,
-                title: 'The Future of AI in Web Development',
-                content: `Artificial Intelligence is transforming the web development landscape by automating repetitive tasks and enhancing user experience. What is Lorem Ipsum?
+        if (!!localStorage.getItem('data')?.length) {
+            const data = [
+                {
+                    id: 1,
+                    title: 'The Future of AI in Web Development',
+                    content: `Artificial Intelligence is transforming the web development landscape by automating repetitive tasks and enhancing user experience. What is Lorem Ipsum?
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 Why do we use it?
@@ -18,14 +19,14 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 
 Where can I get some?
 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free fr`,
-                author: 'John Doe',
-                date: '2025-02-06',
-                tags: ['AI', 'Web Development', 'Technology'],
-            },
-            {
-                id: 2,
-                title: '10 JavaScript Tricks Every Developer Should Know',
-                content: `From array destructuring to async/await, these JavaScript tricks can make your coding life easier.What is Lorem Ipsum?
+                    author: 'John Doe',
+                    date: '2025-02-06',
+                    tags: ['AI', 'Web Development', 'Technology'],
+                },
+                {
+                    id: 2,
+                    title: '10 JavaScript Tricks Every Developer Should Know',
+                    content: `From array destructuring to async/await, these JavaScript tricks can make your coding life easier.What is Lorem Ipsum?
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 Why do we use it?
@@ -39,14 +40,14 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 
 Where can I get some?
 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free fr`,
-                author: 'Jane Smith',
-                date: '2025-02-05',
-                tags: ['JavaScript', 'Coding', 'Tips'],
-            },
-            {
-                id: 3,
-                title: 'How to Optimize React Apps for Performance',
-                content: `Optimizing React apps involves using techniques like memoization, lazy loading, and avoiding unnecessary re-renders. What is Lorem Ipsum?
+                    author: 'Jane Smith',
+                    date: '2025-02-05',
+                    tags: ['JavaScript', 'Coding', 'Tips'],
+                },
+                {
+                    id: 3,
+                    title: 'How to Optimize React Apps for Performance',
+                    content: `Optimizing React apps involves using techniques like memoization, lazy loading, and avoiding unnecessary re-renders. What is Lorem Ipsum?
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 Why do we use it?
@@ -60,14 +61,14 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 
 Where can I get some?
 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free fr`,
-                author: 'Michael Lee',
-                date: '2025-02-04',
-                tags: ['React', 'Performance', 'Optimization'],
-            },
-            {
-                id: 4,
-                title: 'Understanding CSS Grid vs Flexbox',
-                content: `Both CSS Grid and Flexbox are powerful layout systems, but they have distinct use cases.What is Lorem Ipsum?
+                    author: 'Michael Lee',
+                    date: '2025-02-04',
+                    tags: ['React', 'Performance', 'Optimization'],
+                },
+                {
+                    id: 4,
+                    title: 'Understanding CSS Grid vs Flexbox',
+                    content: `Both CSS Grid and Flexbox are powerful layout systems, but they have distinct use cases.What is Lorem Ipsum?
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 Why do we use it?
@@ -81,14 +82,14 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 
 Where can I get some?
 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free fr`,
-                author: 'Emily Brown',
-                date: '2025-02-03',
-                tags: ['CSS', 'Design', 'Frontend'],
-            },
-            {
-                id: 5,
-                title: 'Why TypeScript is the Future of JavaScript',
-                content: `TypeScript provides type safety, better tooling, and improved developer experience.What is Lorem Ipsum?
+                    author: 'Emily Brown',
+                    date: '2025-02-03',
+                    tags: ['CSS', 'Design', 'Frontend'],
+                },
+                {
+                    id: 5,
+                    title: 'Why TypeScript is the Future of JavaScript',
+                    content: `TypeScript provides type safety, better tooling, and improved developer experience.What is Lorem Ipsum?
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 Why do we use it?
@@ -102,27 +103,33 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 
 Where can I get some?
 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free fr`,
-                author: 'Chris Wilson',
-                date: '2025-02-02',
-                tags: ['TypeScript', 'JavaScript', 'Development'],
-            },
-        ];
+                    author: 'Chris Wilson',
+                    date: '2025-02-02',
+                    tags: ['TypeScript', 'JavaScript', 'Development'],
+                },
+            ];
+            localStorage.setItem('data', JSON.stringify(data));
+        }
+        this.data = JSON.parse(localStorage?.getItem('data'));
+        // console.log(Array.isArray(JSON.parse(this.data)));
     }
-    async sendData() {
-        setTimeout(() => {}, 1000);
+    async getData() {
+        setTimeout(() => { }, 1000);
         return this.data;
     }
-    async sendOnePostData(id) {
-        setTimeout(() => {}, 1000);
-        let list = this.data.filter((val) => val.id == id);
-        // console.log(list);
 
-        return list;
+    setDataByPost(data) {
+        // console.log(Array.isArray(this.data));
+        // const newData = this.data;
+        // newData.push(data)
+        const newData = JSON.parse(localStorage?.getItem('data'));
+        newData.push(data);
+        localStorage.setItem('data', JSON.stringify(newData));
+        console.log(newData, "new data")
+        this.data = JSON.parse(localStorage?.getItem('data'));
+        // console.log()
     }
-    getDataByPost(data) {
-        this.data.push(data);
-    }
-    getListLength(){
+    getListLength() {
         return this.data.length;
     }
 }
